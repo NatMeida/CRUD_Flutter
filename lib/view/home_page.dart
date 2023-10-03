@@ -15,8 +15,8 @@ class _HomeState extends State<Home> {
       body: Center(
           child: Column(
         children: [
-          SizedBox(height: 100),
-          Row(
+          const SizedBox(height: 100),
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(
@@ -40,38 +40,44 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
           SizedBox(
               width: 400,
               height: 3,
               child: Container(color: Colors.greenAccent[200])),
-          SizedBox(height: 25),
-          Text(
+          const SizedBox(height: 25),
+          const Text(
             "CONTROLE DE ESTOQUE",
             style: TextStyle(
                 fontSize: 23,
                 color: Colors.greenAccent,
                 fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 45),
+          const SizedBox(height: 45),
           SizedBox(
               width: 400,
               height: 3,
               child: Container(color: Colors.greenAccent[200])),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
+              const Icon(
                 Icons.grass,
                 color: Colors.greenAccent,
                 size: 50,
               ),
-              SizedBox(width: 40),
+              const SizedBox(width: 40),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/ListaPage');
                 },
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.purple[200],
+                    elevation: 10,
+                    shadowColor: Colors.greenAccent,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
                 child: Text(
                   "Produtos cadastrados",
                   style: TextStyle(
@@ -79,29 +85,29 @@ class _HomeState extends State<Home> {
                       color: Colors.grey[700],
                       fontWeight: FontWeight.bold),
                 ),
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.purple[200],
-                    elevation: 10,
-                    shadowColor: Colors.greenAccent,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20))),
               ),
             ],
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
+              const Icon(
                 Icons.add_circle_outlined,
                 color: Colors.greenAccent,
                 size: 50,
               ),
-              SizedBox(width: 40),
+              const SizedBox(width: 40),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/cadastro');
                 },
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.purple[200],
+                    elevation: 10,
+                    shadowColor: Colors.greenAccent,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
                 child: Text(
                   "Cadastrar novo produto",
                   style: TextStyle(
@@ -109,12 +115,6 @@ class _HomeState extends State<Home> {
                       color: Colors.grey[700],
                       fontWeight: FontWeight.bold),
                 ),
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.purple[200],
-                    elevation: 10,
-                    shadowColor: Colors.greenAccent,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20))),
               ),
             ],
           ),
