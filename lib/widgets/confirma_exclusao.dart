@@ -13,7 +13,8 @@ class AlertExclusao extends StatelessWidget {
     final produtoRepository = Provider.of<ProdutoRepository>(context, listen: false);
 
     return AlertDialog(
-      content: const Text("Deseja mesmo excluir?"),
+      title: const Text("Deseja mesmo excluir?"),
+      content: Text(produto.nome),
       actions: [
         ElevatedButton(
           onPressed: () => Navigator.pop(context), 

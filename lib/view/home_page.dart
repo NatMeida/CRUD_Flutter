@@ -116,8 +116,12 @@ class _HomeState extends State<Home> {
                       fontWeight: FontWeight.bold),
                 ),
               ),
+           
             ],
+            
           ),
+            const SizedBox(height: 40),
+            Image.asset("assets/floris.jpg", width: 550, height: 300,),
         ],
       )),
     );

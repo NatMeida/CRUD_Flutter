@@ -33,14 +33,19 @@ class ProdutoTile extends StatelessWidget {
           children: [
             Expanded(
                 child: IconButton(
-                    onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Alterar(produto: produto))),
+                    onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Alterar(produto: produto))),
                     icon: const Icon(
                       Icons.edit,
                       color: Colors.greenAccent,
                     ))),
             Expanded(
                 child: IconButton(
-                    onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AlertExclusao(produto: produto))),
+                    onPressed: () => showDialog(
+                        context: context,
+                        builder: (context) => AlertExclusao(produto: produto)),
                     icon: const Icon(
                       Icons.delete,
                       color: Colors.greenAccent,
